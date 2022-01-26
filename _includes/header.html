@@ -4,12 +4,14 @@
       <!-- Nav Bar -->
       <nav id="navbar" class="navbar navbar-light navbar-expand-sm {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}">
         <div class="container">
+          <!-- Title -->
           {% if page.permalink != '/' -%}
           <a class="navbar-brand title fw-lighter" href="{{ site.baseurl | prepend: site.url }}/">
               {%- if site.title == "blank" -%}<span class="fw-bold">{{ site.first_name }}</span> {{ site.middle_name }}  {{ site.last_name }}{%- else -%}{{ site.title }}{%- endif -%}
           </a>
-          {%- elsif site.enable_navbar_social -%}
+          {% endif %}
           <!-- Social Icons -->
+          {%- if site.enable_navbar_social or page.title == "about" -%}
           <div class="navbar-brand social">
             {% include social.html %}
           </div>
@@ -32,15 +34,15 @@
               {% endfor %}
 
               <!-- About -->
-              <li class="nav-item {% if page.permalink == '/' %}active{% endif %}">
+              <!-- <li class="nav-item {% if page.permalink == '/' %}active{% endif %}">
                 <a class="nav-link" href="{{ '/' | relative_url }}">{{ about_title }}
                   {%- if page.permalink == '/' -%}
                   <span class="sr-only">(current)</span>
                   {%- endif -%}
                 </a>
-              </li>
-              {% if site.blog_nav_title %}
+              </li> -->
               <!-- Blog -->
+              {% if site.blog_nav_title %}
               <li class="nav-item {% if page.url contains 'blog' %}active{% endif %}">
                 <a class="nav-link" href="{{ '/blog/' | relative_url }}">{{ site.blog_nav_title }}
                   {%- if page.url contains 'blog' -%}
@@ -83,10 +85,9 @@
               {%- endif -%}
               {% endfor -%}
               {%- if site.enable_darkmode %}
-
               <!-- Toogle theme mode -->
               <li class="toggle-container">
-                <button id="light-toggle" title="Change theme">
+                <button id="light-toggle" title="Change theme" class="umami--click--theme-change-button">
                   <i class="fas fa-moon"></i>
                   <i class="fas fa-sun"></i>
                 </button>
