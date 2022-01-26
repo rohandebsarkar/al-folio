@@ -14,6 +14,10 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+    - name: Setup timezone
+      uses: zcong1993/setup-timezone@master
+      with:
+        timezone: ${{ secrets.TIMEZONE }}
     - name: Checkout code
       uses: actions/checkout@v3
     - name: Setup Ruby
@@ -32,7 +36,7 @@ jobs:
         if [[ ${GITHUB_REF} = refs/pull/*/merge ]]; then # pull request
           echo "::set-output name=SRC_BRANCH::${GITHUB_HEAD_REF}"
           echo "::set-output name=NO_PUSH::--no-push"
-        elif [[ ${GITHUB_REF} = refs/heads/* ]]; then # branch, e.g. master, source etc
+        elif [[ ${GITHUB_REF} = refs/heads/* ]]; then # branch, e.g. main, master, source etc
           echo "::set-output name=SRC_BRANCH::${GITHUB_REF#refs/heads/}"
         fi
         echo "::set-output name=DEPLOY_BRANCH::gh-pages"

@@ -4,7 +4,7 @@
 
 # Parse cmd arguments
 
-SRC_BRANCH="master"
+SRC_BRANCH="main"
 DEPLOY_BRANCH="gh-pages"
 
 USAGE_MSG="usage: deploy [-h|--help] [-u|--user] [-s|--src SRC_BRANCH] [-d|--deploy DEPLOY_BRANCH] [--verbose] [--no-push]"
@@ -19,7 +19,7 @@ while [[ $# > 0 ]]; do
         ;;
         -u|--user)
         SRC_BRANCH="source"
-        DEPLOY_BRANCH="master"
+        DEPLOY_BRANCH="main"
         ;;
         -s|--src)
         SRC_BRANCH="$2"
@@ -107,7 +107,7 @@ touch .nojekyll
 
 # Push to DEPLOY_BRANCH
 git add -fA
-git commit --allow-empty -m "$(git log -1 --pretty=%B) [ci skip]"
+git commit --allow-empty -m "Deploy gh-pages: ${GITHUB_SHA::8} ~ $(git log -1 --pretty=%B)"
 [[ ${NO_PUSH} ]] || git push -f -q origin $DEPLOY_BRANCH
 
 # Move back to SRC_BRANCH
