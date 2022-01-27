@@ -1,6 +1,7 @@
 ---
 layout: default
-title: blog
+title: Blog
+permalink: /blog/
 pagination:
   enabled: true
   collection: posts
@@ -48,6 +49,15 @@ pagination:
     {% assign categories = post.categories | join: "" %}
 
     <li>
+      <p class="post-meta">
+        {{ post.date | date: '%B %-d, %Y' }}
+        &nbsp; &bull; &nbsp;
+        {{ read_time }} min read
+        {%- if post.external_source %}
+        &nbsp; &bull; &nbsp; 
+        {{ post.external_source }}
+        {%- endif %}
+      </p>
       <h3>
         {% if post.redirect == blank %}
           <a class="post-title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
@@ -63,13 +73,6 @@ pagination:
         {% endif %}
       </h3>
       <p>{{ post.description }}</p>
-      <p class="post-meta">
-        {{ read_time }} min read &nbsp; &bull; &nbsp;
-        {{ post.date | date: '%B %-d, %Y' }}
-        {%- if post.external_source %}
-        &nbsp; &bull; &nbsp; {{ post.external_source }}
-        {%- endif %}
-      </p>
       <p class="post-tags">
         <a href="{{ year | prepend: '/blog/' | prepend: site.baseurl}}"> <i class="fas fa-calendar fa-sm pe-1"></i> {{ year }} </a>
         {%- if tags != "" %}
