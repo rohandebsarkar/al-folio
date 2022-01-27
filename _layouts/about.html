@@ -11,10 +11,14 @@ layout: default
           <p class="desc">{{ page.subtitle }}</p>
         </header>
 
-        <article>
+        <article style="padding-top: 1rem;">
           {% if page.profile -%}
           <div class="profile float-{%- if page.profile.align == 'left' -%}start{%- else -%}end{%- endif -%}">
-            {%- if page.profile.image %}
+            {%- if page.profile.svg -%}
+              {%- assign profile_svg_path = page.profile.svg | prepend: 'assets/svg/' -%}
+              <object data={{ profile_svg_path }} type="image/svg+xml" width="auto" height="auto" title={{ page.profile.svg }}>
+              </object>
+            {%- elsif page.profile.image %}
               {%- assign profile_image_path = page.profile.image | prepend: 'assets/img/' -%}
 
               {% if page.profile.image_circular %}
@@ -39,7 +43,11 @@ layout: default
           <div class="clearfix">
             {{ content }}
           </div>
-
+          
+          <div class="tagline">
+            {{ site.tagline }}
+          </div>
+          
           {% if page.news -%}
           <!-- News -->
           {%- include news.html %}
