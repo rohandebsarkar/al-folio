@@ -11,9 +11,7 @@
     <!-- <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons"> -->
 
     <!-- Code Syntax Highlighting -->
-    {% if page.enable_code -%}
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/{{ site.highlight_theme }}.css" />
-    {%- endif %}
+    <link rel="stylesheet" {% if page.enable_code %} href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/{{ site.highlight_theme_light | append: '.css' }}" {% endif %}  media="none" id="highlight_theme_light" />
     
     <!-- Styles -->
     {% if site.icon.size < 3 %}
@@ -26,7 +24,7 @@
     
     <!-- Dark Mode -->
     {% if site.enable_darkmode %}
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/{{ site.highlight_theme_dark | append: '.css' }}" media="none" id="highlight_theme_dark" />
+    <link rel="stylesheet" {% if page.enable_code %} href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/{{ site.highlight_theme_dark | append: '.css' }}" {% endif %} media="none" id="highlight_theme_dark" />
 
     <script src="{{ '/assets/js/theme.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/dark_mode.js' | relative_url }}"></script>
