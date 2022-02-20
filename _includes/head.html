@@ -5,8 +5,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@{{ site.bootstrap.version }}/dist/css/bootstrap.min.css" rel="stylesheet" integrity="{{ site.bootstrap.integrity.css }}" crossorigin="anonymous">
 
     <!-- Fonts & Icons -->
+    {% unless page.permalink == '/' %}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@{{ site.fontawesome.version }}/css/all.min.css" integrity="{{ site.fontawesome.integrity }}" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@{{ site.academicons.version }}/css/academicons.min.css" integrity="{{ site.academicons.integrity }}" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@{{ site.academicons.version }}/css/academicons.min.css" integrity="{{ site.academicons.integrity }}" crossorigin="anonymous"> -->
+    {% endunless %}
 
     {% if site.enable_material_design %}
     <!-- MDBootstrap -->
@@ -15,7 +17,8 @@
     {% endif %}
 
     <!-- Code Syntax Highlighting -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/{{ site.highlight_theme_light | append: '.css' }}" media="none" id="highlight_theme_light" />
+   
+    <link rel="stylesheet" {% if page.enable_code %}href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/{{ site.highlight_theme_light | append: '.css' }}"{% endif %} media="none" id="highlight_theme_light" />
 
     <!-- Favicon -->
     {% if site.icon.size < 3 %}
@@ -29,7 +32,7 @@
     
     <!-- Dark Mode -->
     {% if site.enable_darkmode %}
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/{{ site.highlight_theme_dark | append: '.css' }}" media="none" id="highlight_theme_dark" />
+    <link rel="stylesheet" {% if page.enable_code %}href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/{{ site.highlight_theme_dark | append: '.css' }}"{% endif %} media="none" id="highlight_theme_dark" />
 
     <script src="{{ '/assets/js/theme.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/dark_mode.js' | relative_url }}"></script>
