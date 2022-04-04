@@ -19,12 +19,12 @@
         {%- capture title -%}{{ site.title }}{%- endcapture -%}
     {%- endif -%}
     {% if page.url == '/blog/index.html' %}
-        {{ site.blog_nav_title }} | {{ title }}
+        {{ site.blog_nav_title }} &bull; {{ title }}
     {%- elsif page.title != "blank" and page.url != "/" -%}
         {%- if page.title == nil or page.title == "" -%}
-            {{ page.date | date: "%Y" }} | {{ title }}
+            {{ page.date | date: "%Y" }} &bull; {{ title }}
         {%- else -%}
-            {{ page.title }} | {{ title }}
+            {{ page.title }} &bull; {{ title }}
         {%- endif -%}
     {%- else -%}
         {{ title }}
