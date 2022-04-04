@@ -19,9 +19,9 @@
         {%- capture title -%}{{ site.title }}{%- endcapture -%}
     {%- endif -%}
     {% if page.url == '/blog/index.html' %}
-        {{ site.blog_nav_title }} | {{ title }}
-    {%- elsif page.title != "blank" and page.url != "/" -%}
-        {{ page.title }} | {{ title }}
+        {{ site.blog_nav_title }} &bull; {{ title }}
+    {%- elsif page.title != "blank" and page.url != "/" and page.title != "" -%}
+        {{ page.title }} &bull; {{ title }}
     {%- else -%}
         {{ title }}
     {%- endif -%}
