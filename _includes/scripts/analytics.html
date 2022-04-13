@@ -7,12 +7,15 @@
     gtag('js', new Date());
     gtag('config', '{{ site.google_analytics }}');
   </script>
-  {%- endif -%}
-  {%- if site.enable_panelbear_analytics -%}
+{%- endif -%}
+{%- if site.enable_panelbear_analytics -%}
   <!-- Panelbear Analytics - We respect your privacy -->
   <script async src="https://cdn.panelbear.com/analytics.js?site={{site.panelbear_analytics}}"></script>
   <script>
     window.panelbear = window.panelbear || function() { (window.panelbear.q = window.panelbear.q || []).push(arguments); };
     panelbear('config', { site: '{{site.panelbear_analytics}}' });
   </script>
+{%- endif -%}
+{%- if site.enable_umami_analytics -%}
+  <script async defer src="{{ site.umami.script }}" data-website-id="{{ site.umami_analytics }}" data-domains="rohandebsarkar.github.io"{% if site.umami.integrity %} integrity={{ site.umami.integrity }} crossorigin="anonymous"{% endif %}></script>
 {%- endif -%}
