@@ -16,3 +16,6 @@
     panelbear('config', { site: '{{site.panelbear_analytics}}' });
   </script>
 {%- endif -%}
+{%- if site.enable_umami_analytics -%}
+  <script async src="{{ site.umami.script }}" data-website-id="{{ site.umami_analytics }}" data-domains="rohandebsarkar.github.io"{% if site.umami.integrity %} integrity={{ site.umami.integrity }} crossorigin="anonymous"{% endif %}></script>
+{%- endif -%}
