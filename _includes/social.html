@@ -1,5 +1,5 @@
             {%- if site.email -%}
-            <a href="mailto:{{ site.email | encode_email }}" title="email">{% fa_svg fas.fa-envelope %}</a>
+            <a href="mailto:{{ site.email | encode_email }}" title="email" class="umami--click--email-button">{% fa_svg fas.fa-envelope %}</a>
             {% endif %}
             {%- if site.telegram_username -%}
             <a href="https://telegram.me/{{ site.telegram_username }}" title="telegram"><i class="fab fa-telegram"></i></a>
@@ -22,11 +22,11 @@
             {%- if site.research_gate_profile -%}
             <a href="https://www.researchgate.net/profile/{{site.research_gate_profile}}/" title="ResearchGate"><i class="ai ai-researchgate"></i></a>
             {% endif %}
-            {%- if site.github_username -%}
-            <a href="https://github.com/{{ site.github_username }}" title="GitHub">{% fa_svg fab.fa-github %}</a>
-            {% endif %}
             {%- if site.linkedin_username -%}
-            <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" title="LinkedIn">{% fa_svg fab.fa-linkedin %}</a>
+            <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" title="LinkedIn" class="umami--click--linkedin-social-button">{% fa_svg fab.fa-linkedin %}</a>
+            {% endif %}
+            {%- if site.github_username -%}
+            <a href="https://github.com/{{ site.github_username }}" title="GitHub" class="umami--click--github-social-button">{% fa_svg fab.fa-github %}</a>
             {% endif %}
             {%- if site.twitter_username -%}
             <a href="https://twitter.com/{{ site.twitter_username }}" title="Twitter">{% fa_svg fab.fa-twitter %}</a>
