@@ -1,3 +1,9 @@
+## [rohandebsarkar.github.io](https://rohandebsarkar.github.io/) [forked from [alshedivat/al-folio](https://github.com/alshedivat/al-folio)]
+
+:warning: **The main branch of this repo is maintained using [`git rebase -i`](https://git-scm.com/docs/git-rebase#Documentation/git-rebase.txt--i) and [`git push -f`](https://git-scm.com/docs/git-push#Documentation/git-push.txt--f). Therefore, the commit history may change often. If you are using code from this repo, be cautious.**
+
+---
+
 # al-folio
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [maintainers]: https://img.shields.io/badge/maintainers-3-success.svg 'Number of maintainers'
@@ -126,7 +132,13 @@ Score Based Methods (NeurIPS: <a href="https://score-based-methods-workshop.gith
 
 ## Lighthouse PageSpeed Insights
 
-[![Google PageSpeeg](https://raw.githubusercontent.com/alshedivat/al-folio/master/assets/img/pagespeed.svg)](https://pagespeed.web.dev/report?url=https%3A%2F%2Falshedivat.github.io%2Fal-folio%2F&form_factor=desktop)
+### Desktop:
+
+[![Google PageSpeed](assets/svg/pagespeed.svg)](https://pagespeed.web.dev/report?url=https://rohandebsarkar.github.io/&form_factor=desktop)
+
+### Mobile:
+
+[![Google PageSpeed](assets/svg/pagespeed_mobile.svg)](https://pagespeed.web.dev/report?url=https://rohandebsarkar.github.io/&form_factor=mobile)
 
 
 ## Table Of Contents
