@@ -1,3 +1,9 @@
+## [rohandebsarkar.github.io](https://rohandebsarkar.github.io/) [forked from [alshedivat/al-folio](https://github.com/alshedivat/al-folio)]
+
+**The main branch of this repo is updated using [`git rebase -i`](https://git-scm.com/docs/git-rebase#Documentation/git-rebase.txt--i) and [`git push -f`](https://git-scm.com/docs/git-push#Documentation/git-push.txt--f). Therefore the commit history will change often. If you are using this code, be cautious.**
+
+---
+
 # al-folio
 
 [![deploy](https://github.com/alshedivat/al-folio/actions/workflows/deploy.yml/badge.svg)](https://github.com/alshedivat/al-folio/actions/workflows/deploy.yml)
@@ -105,7 +111,13 @@ Neural Compression (ICLR: <a href="https://neuralcompression.github.io/" target=
 
 ## Lighthouse PageSpeed Insights
 
-[![Google PageSpeeg](https://raw.githubusercontent.com/alshedivat/al-folio/master/assets/img/pagespeed.svg)](https://pagespeed.web.dev/report?url=https%3A%2F%2Falshedivat.github.io%2Fal-folio%2F&form_factor=desktop)
+### Desktop:
+
+[![Google PageSpeed](assets/svg/pagespeed.svg)](https://pagespeed.web.dev/report?url=https://rohandebsarkar.github.io/&form_factor=desktop)
+
+### Mobile:
+
+[![Google PageSpeed](assets/svg/pagespeed_mobile.svg)](https://pagespeed.web.dev/report?url=https://rohandebsarkar.github.io/&form_factor=mobile)
 
 
 ## Getting started
