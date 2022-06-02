@@ -1,0 +1,17 @@
+---
+permalink: /sitemap.txt
+---
+
+{% for page in site.pages -%}
+{% if page.title and page.permalink != '/404.html' -%}
+{{ page.url | absolute_url | remove: 'index.html' }}
+{% endif -%}
+{% endfor -%}
+
+{% for post in site.posts -%}
+{{ post.url | absolute_url | remove: 'index.html' }}
+{% endfor -%}
+
+{% for project in site.projects -%}
+{{ project.url | absolute_url | remove: 'index.html' }}
+{% endfor -%}
