@@ -1,0 +1,91 @@
+- title: General Information
+  type: map
+  contents:
+    - name: First Name
+      value: Rohan Deb
+    - name: Last Name
+      value: Sarkar
+    - name: Known Languages
+      value: বাংলা <i>(Bangla)</i>, English
+
+
+- title: Education
+  type: time_table
+  contents:
+    - title: Bachelor of Science (Honours) - Physics
+      institution: <a href="https://rkmvccrahara.org">Ramakrishna Mission Vivekananda Centenary College, Rahara, Kolkata</a>
+      year: Sep 2021 - 2024
+      description:
+        - Major in Physics, with Mathematics and Computer Science as minor subject.
+    
+    - title: Senior Secondary (XII Standard)
+      institution: <a href="http://ipskol.com">International Public School, Kolkata</a>
+      year: Apr 2019 - Jun 2021
+      description:
+        - Physical Sciences with Mathematics and Computer Science.
+
+    - title: Secondary (X Standard)
+      institution: <a href="http://ipskol.com">International Public School, Kolkata</a>
+      year: Apr 2006 - Mar 2019
+      description:
+
+
+- title: Certifications
+  type: time_table
+  contents:
+    - title: '<a href="https://www.edx.org/course/using-python-for-research">PH526x: Using Python for Research</a>'
+      institution: <a href="https://www.edx.org/school/harvardx">HarvardX by Harvard University</a> &bull; <a href="https://www.edx.org/">edX</a>
+      year: Jun 2022 - Sep 2022
+      description:
+        - 'Certificate: <a href="https://courses.edx.org/certificates/a161d26a7e8749ab99560b1e2718cffd">courses.edx.org/certificates/a161d26a7e8749ab99560b1e2718cffd</a>'
+
+    - title: '<a href="https://www.edx.org/course/quantum-computing">QUAN11000: Introduction to Quantum Computing for Everyone</a>'
+      institution: <a href="https://www.edx.org/school/uchicagox">UChicagoX by The University of Chicago</a> &bull; <a href="https://www.edx.org/">edX</a>
+      year: Jul 2022 - Aug 2022
+      description:
+        - title: 'Certificate:'
+          contents:
+            - 'Course 1: <a href="https://courses.edx.org/certificates/9ccc69820111457ea233c635939a68bc">courses.edx.org/certificates/9ccc69820111457ea233c635939a68bc</a>'
+
+    - title: '<a href="https://www.edx.org/course/introduction-to-computer-science-and-programming-7">6.00.1x: Introduction to Computer Science and Programming Using Python</a>'
+      institution: <a href="https://www.edx.org/school/mitx">MITx by Massachussets Institute of Technology</a> &bull; <a href="https://www.edx.org/">edX</a>
+      year: Jun 2021 - Aug 2021
+      description:
+        - 'Certificate: <a href="https://courses.edx.org/certificates/a123d05cecad4eaeb9e5ba55401c18ea">courses.edx.org/certificates/a123d05cecad4eaeb9e5ba55401c18ea</a>'
+
+
+- title: Scholarships
+  type: time_table
+  contents:
+    - title: Central Sector Scheme of Scholarships for College and University Students
+      institution: <a href="https://www.education.gov.in/en/higher_education">Department of Higher Education, Ministry of Education, Govt. of India</a>
+      year: Apr 2022
+      description:
+        - Scholarship amount of INR 10,000.
+    
+    - title: Letter of Scholarship
+      institution: <a href="http://ipskol.com">International Public School, Kolkata</a>
+      year: Sep 2019
+      description:
+        - For excellent performance in academics for the session 2018-2019 (X Standard).
+
+
+- title: Honors and Awards
+  type: time_table
+  contents:
+    - title: Appreciation Letter
+      institution: <a href="https://dst.gov.in">Minister of Science & Technology, Govt. of India</a>
+      year: Jan 2020
+      description:
+        - For participation as a student in the Guinness World Record for the “Largest astrophysics lesson” on the “applications of spectroscopy in astrophysics”.
+
+
+- title: Other Interests
+  type: nested_list
+  contents:
+    - title: Hobbies
+      items:
+        - Coding and learning new programming languages.
+        - Surfing the internet to research on various topis of my interests.
+        - Contributing to various open source projects.
+        - Politics.
