@@ -3,9 +3,6 @@
 
   <!-- Head -->
   <head>
-  {%- if page.redirect -%}
-    <meta http-equiv="refresh" content="{{ page.redirect.timer }}; url={% if page.redirect.url == 'absolute_url' %}{{ site.baseurl | prepend: site.url }}{% else %}{{ page.redirect.url }}{% endif %}/" />
-  {%- endif -%}
   {% include head.html %}
   </head>
 
