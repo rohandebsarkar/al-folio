@@ -171,6 +171,7 @@ plugins:
   - jekyll-archives
   - jekyll-diagrams
   - jekyll-email-protect
+  - jekyll-favicon
   - jekyll-feed
   - jekyll-imagemagick
   - jekyll-minifier
