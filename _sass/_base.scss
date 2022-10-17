@@ -189,6 +189,15 @@ blockquote {
     padding-bottom: 0;
     padding-top: 0;
     font-size: 1.7rem;
+    svg {
+      width: 1.5rem;
+      height: 1.5rem;
+      fill: var(--global-text-color);
+      transition-property: all 0.2s ease-in-out;
+      &:hover {
+        fill: var(--global-theme-color);
+      }
+    }
     a {
       i::before {
         color: var(--global-text-color);
@@ -254,6 +263,15 @@ blockquote {
   text-align: center;
   .contact-icons {
     font-size: 4rem;
+    svg {
+      width: 3.5rem;
+      height: 3.5rem;
+      fill: var(--global-text-color);
+      transition-property: all 0.2s ease-in-out;
+      &:hover {
+        fill: var(--global-theme-color);
+      }
+    }
     a {
       i::before {
         color: var(--global-text-color);
