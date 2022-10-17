@@ -190,6 +190,15 @@ blockquote {
     padding-bottom: 0;
     padding-top: 0;
     font-size: 1.7rem;
+    svg {
+      width: 1.5rem;
+      height: 1.5rem;
+      fill: var(--global-text-color);
+      transition-property: all 0.2s ease-in-out;
+      &:hover {
+        fill: var(--global-theme-color);
+      }
+    }
     a {
       i::before {
         color: var(--global-text-color);
@@ -245,13 +254,17 @@ blockquote {
 }
 
 #light-toggle {
-  width: 1.5rem;
-  padding: 0;
+  height: 100%;
   border: 0;
   background-color: inherit;
-  color: var(--global-text-color);
-  &:hover {
-    color: var(--global-hover-color);
+  svg {
+    width: 1rem;
+    height: 1rem;
+    transition-property: all 0.2s ease-in-out;
+    fill: var(--global-text-color);
+    &:hover {
+      fill: var(--global-hover-color);
+    }
   }
 }
 
@@ -261,6 +274,15 @@ blockquote {
   text-align: center;
   .contact-icons {
     font-size: 4rem;
+    svg {
+      width: 3.5rem;
+      height: 3.5rem;
+      fill: var(--global-text-color);
+      transition-property: all 0.2s ease-in-out;
+      &:hover {
+        fill: var(--global-theme-color);
+      }
+    }
     a {
       i::before {
         color: var(--global-text-color);

@@ -97,10 +97,10 @@
               {%- if site.enable_darkmode %}
 
               <!-- Toogle theme mode -->
-              <li class="toggle-container">
+              <li class="nav-item">
                 <button id="light-toggle" title="Change theme">
-                  <i class="fas fa-moon"></i>
-                  <i class="fas fa-sun"></i>
+                  <span class="fa-moon">{% fa_svg fas.fa-moon %}</span>
+                  <span class="fa-sun">{% fa_svg fas.fa-sun %}</span>
                 </button>
               </li>
               {%- endif %}
