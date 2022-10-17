@@ -248,12 +248,17 @@ blockquote {
 }
 
 #light-toggle {
-  padding: 0;
+  height: 100%;
   border: 0;
   background-color: inherit;
-  color: var(--global-text-color);
-  &:hover {
-    color: var(--global-hover-color);
+  svg {
+    width: 1rem;
+    height: 1rem;
+    transition-property: all 0.2s ease-in-out;
+    fill: var(--global-text-color);
+    &:hover {
+      fill: var(--global-hover-color);
+    }
   }
 }
 
