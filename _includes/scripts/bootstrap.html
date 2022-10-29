@@ -1,5 +1,7 @@
+{% unless site.disable_bootstrap_js %}
 <!-- Bootsrap script -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@{{ site.bootstrap.version }}/dist/js/bootstrap.bundle.min.js" integrity="{{ site.bootstrap.integrity.js }}" crossorigin="anonymous"></script>
+{% endunless %}
 
 {% if site.enable_material_design %}
 <!-- MDBootstrap script -->

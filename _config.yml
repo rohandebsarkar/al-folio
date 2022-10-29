@@ -345,6 +345,7 @@ enable_project_categories:  true   # enables categorization of projects into
 enable_tooltips:            true   # enables automatic tooltip links generated
                                    # for each section titles on pages and posts
 disable_jquery:             false  # disables jQuery
+disable_bootstrap_js:       false  # disable Bootstrap JavaScript files
 
 
 # -----------------------------------------------------------------------------
