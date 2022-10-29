@@ -1,11 +1,8 @@
-$(document).ready(function() {
-    $('a.abstract').click(function() {
-        $(this).parent().parent().find(".abstract.hidden").toggleClass('open');
-        $(this).parent().parent().find(".bibtex.hidden.open").toggleClass('open');
-    });
-    $('a.bibtex').click(function() {
-        $(this).parent().parent().find(".bibtex.hidden").toggleClass('open');
-        $(this).parent().parent().find(".abstract.hidden.open").toggleClass('open');
-    });
-    $('a').removeClass('waves-effect waves-light');
+window.addEventListener("DOMContentLoaded", function() {
+    document.querySelectorAll('a.abstract').forEach(item => item.addEventListener("click", function() {
+        this.parent.parent.querySelectorAll(".abstract.hidden").forEach(item => item.classList.toggle('open'));
+    }));
+    document.querySelectorAll('a.bibtex').forEach(item => item.addEventListener("click", function() {
+        this.parent.parent.querySelectorAll(".bibtex.hidden").forEach(item => item.classList.toggle('open'));
+    }));
 });
