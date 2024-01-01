@@ -1,17 +1,1 @@
-window.addEventListener("DOMContentLoaded", function() {
-    document.querySelectorAll('a.abstract').forEach(item => item.addEventListener("click", function() {
-        this.parent.parent.querySelectorAll(".abstract.hidden").forEach(item => item.classList.toggle('open'));
-    }));
-    document.querySelectorAll('a.bibtex').forEach(item => item.addEventListener("click", function() {
-        this.parent.parent.querySelectorAll(".bibtex.hidden").forEach(item => item.classList.toggle('open'));
-    }));
-
-    document.getElementById("bs-navbar-toggler").onclick = function() {
-        this.classList.toggle('collapsed');
-        document.getElementById("navbarNav").classList.toggle('show');
-        if (this.getAttribute("aria-expanded") === 'false') 
-            this.setAttribute("aria-expanded", 'true');
-        else 
-            this.setAttribute("aria-expanded", 'false');
-    };
-});
+window.addEventListener("DOMContentLoaded",function(){document.querySelectorAll("a.abstract").forEach(e=>e.addEventListener("click",function(){this.parent.parent.querySelectorAll(".abstract.hidden").forEach(e=>e.classList.toggle("open"))})),document.querySelectorAll("a.bibtex").forEach(e=>e.addEventListener("click",function(){this.parent.parent.querySelectorAll(".bibtex.hidden").forEach(e=>e.classList.toggle("open"))})),document.getElementById("bs-navbar-toggler").onclick=function(){this.classList.toggle("collapsed"),document.getElementById("navbarNav").classList.toggle("show"),"false"===this.getAttribute("aria-expanded")?this.setAttribute("aria-expanded","true"):this.setAttribute("aria-expanded","false")}});

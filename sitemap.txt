@@ -1,17 +1,10 @@
----
-permalink: /sitemap.txt
----
-
-{% for page in site.pages -%}
-{% if page.title and page.permalink != '/404.html' -%}
-{{ page.url | absolute_url | remove: 'index.html' }}
-{% endif -%}
-{% endfor -%}
-
-{% for post in site.posts -%}
-{{ post.url | absolute_url | remove: 'index.html' }}
-{% endfor -%}
-
-{% for project in site.projects -%}
-{{ project.url | absolute_url | remove: 'index.html' }}
-{% endfor -%}
+https://rohandebsarkar.github.io/al-folio/
+https://rohandebsarkar.github.io/al-folio/projects/
+https://rohandebsarkar.github.io/al-folio/resume/
+https://rohandebsarkar.github.io/al-folio/blog/tag/satyajit-ray/
+https://rohandebsarkar.github.io/al-folio/blog/tag/manik-da/
+https://rohandebsarkar.github.io/al-folio/blog/tag/birth-centenary/
+https://rohandebsarkar.github.io/al-folio/blog/tag/tribute/
+https://rohandebsarkar.github.io/al-folio/blog/
+https://rohandebsarkar.github.io/al-folio/blog/2020/remembering-satyajit-ray/
+https://rohandebsarkar.github.io/al-folio/projects/cyclotron/
